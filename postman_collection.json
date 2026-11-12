@@ -39,11 +39,6 @@
               "key": "with_scratch",
               "value": "true",
               "type": "text"
-            },
-            {
-              "key": "high_res",
-              "value": "false",
-              "type": "text"
             }
           ]
         },

@@ -51,7 +51,6 @@ def health_check():
 async def restore_photo(
     file: UploadFile = File(...),
     with_scratch: bool = Form(True),
-    high_res: bool = Form(False),
 ):
     if not os.path.isdir(REPO_DIR):
         raise HTTPException(
@@ -84,8 +83,6 @@ async def restore_photo(
     ]
     if with_scratch:
         cmd.append("--with_scratch")
-    if high_res:
-        cmd.append("--HR")
 
     env = os.environ.copy()
     venv_bin = os.path.dirname(sys.executable)
